@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ccinfo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>les diviseurs d'un nombre entier</h1>
+        <form action="">
+            <label for="">entrer un nombre entier</label><br><br>
+            <input type="text"id="nb"><br><br>
+            <button type="button" onclick="diviseur()">valider</button>
+            <br>
+            <h3 id="r"></h3><br>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function diviseur() {
+        var r="les diviseurs sont : "
+        var nb=document.getElementById("nb").value
+        for (let i = 2; i <=nb; i++) {
+            if((nb%i)==0)
+            {
+                r+=i+" - "
+            }
+        }
+        document.getElementById("r").innerHTML=r
+    }
+</script>
